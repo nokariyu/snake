@@ -59,6 +59,18 @@ uint16_t nsGetRandom(uint16_t* seed){
     return *seed;
 }
 
+void nsAddApple(NSengine* engine){
+    if(!engine->apple) return;
+    for(uint16_t i = 0; i < engine->width*engine->height; i++){
+        if(engine->grid[i].val == NS_EMPTY){
+            while(engine->grid[nsGetRandom(&engine->seed)%(engine->width*engine->height)].val != NS_EMPTY) {}
+            engine->grid[engine->seed%(engine->width*engine->height)].val = NS_APPLE;
+            return;
+        }
+    }
+    engine->apple = 0;
+}
+
 void nsChangeDirection(uint8_t toDirection, NSengine* engine){
     if(toDirection == engine->cant_direction) return;
     engine->direction = toDirection;

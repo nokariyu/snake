@@ -49,6 +49,8 @@ uint8_t nsCheck(NSengine* engine);
 
 uint16_t nsGetRandom(uint16_t* seed);
 
+void nsAddApple(NSengine* engine);
+
 void nsChangeDirection(uint8_t toDirection, NSengine* engine);
 
 void nsMoveTail(NSengine* engine);
