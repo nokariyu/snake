@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <nsnake.h>
+#include "../include/nsnake.h"
 #include <time.h>
 #include <unistd.h>
 #include <termios.h>
