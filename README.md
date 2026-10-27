@@ -1,4 +1,5 @@
-#Snake Game Engine
+# Snake Game Engine
+
 ###
 
 Nokariyu Snake(nsnake) is a snake game engine, made with c.
